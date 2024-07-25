@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from 'next/image';
-import { Timeline } from "../../public/details";
+import { Timeline } from "../details";
 import portfolio from "../../public/home/portfolio.png";
 import backdrop from "../../public/home/background.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
