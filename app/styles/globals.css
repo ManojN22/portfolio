@@ -89,6 +89,13 @@
   align-items: center;
   gap: 15px;
 }
+.image-height{
+  height: 256px;
+}
+.pin-image-height{
+  height: 150px;
+}
+
 .social-buttons a {
   color: white;
   transition: color 0.3s;

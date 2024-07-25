@@ -15,20 +15,16 @@ const Projects = () => {
               alt={project.title}
               width={400}
               height={300}
-              className="w-full  object-cover"
+              className="w-full image-height object-scale-down"
             />
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
               <p className="text-gray-700 mb-4">{project.description}</p>
-              <Link href={project.github}>
-                {/* <a
-                  className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                > */}
-                  View on GitHub
-                {/* </a>s */}
-              </Link>
+              {project.github?<Link href={project.github}>View on GitHub</Link>:""}
+            
+        
+             
+              
             </div>
           </div>
         ))}

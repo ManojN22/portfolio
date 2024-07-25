@@ -6,7 +6,7 @@ import backdrop from "../../public/home/background.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const SocialButtons = () => {
   return (
     <div className="social-buttons">
@@ -64,7 +64,14 @@ export const AboutMe = ()=>{
 
 export const HorizontalTimeline = () => {
   return (
-    <div className="timeline flex">
+    <div>
+      <h1 className="flex items-center  text-2xl text-white font-bold mb-8">About me <Link href='/About-me' className="ml-4 flex items-center justify-center w-7 h-7">
+              <FontAwesomeIcon icon={faArrowRight} className="text-white" />
+          </Link></h1>
+
+          <div className="timeline flex">
+      
+        
       {Timeline.map((event, index) => (
         <div key={index} className="timelineEvent flex-grow">
           <div className="circle bg-white"></div>
@@ -77,6 +84,8 @@ export const HorizontalTimeline = () => {
         </div>
       ))}
     </div>
+    </div>
+    
   );
 }
 

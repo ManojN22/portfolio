@@ -15,7 +15,6 @@ interface routeType {
 
 export const routes:Array<routeType> = [
     {route:'/', name:'Home', img:home},
-    {route:'/Projects', name:'Project', img:home}
-    // {route:'/Resume', name:'Resume',img:resume},
-    // {route:'/About-Me', name:'About Me',img:aboutme}
+    {route:'/Projects', name:'Project', img:home},
+    {route:'/About-me', name:'About me', img:home}
 ]
