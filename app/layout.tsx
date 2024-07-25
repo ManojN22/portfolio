@@ -29,7 +29,7 @@ export default function RootLayout({
         </head>
         
         <body className="full-screen flex justify-center align-middle">
-          <div className="h-full width-1200 flex flex-col" >
+          <div className="width-full h-full flex flex-col" >
            <div>
             <Navbar />
            </div>

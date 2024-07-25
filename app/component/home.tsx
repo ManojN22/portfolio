@@ -31,7 +31,7 @@ const SocialButtons = () => {
 
 export const AboutMe = ()=>{
     return <div className="my_portfolio flex items-center">
-        <div className="flex flex-row ">
+        <div className="flex flex-col lg:flex-row ">
           
           <div className="flex-1"
           style={{

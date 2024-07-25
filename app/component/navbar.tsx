@@ -12,7 +12,7 @@ export default function Navbar() {
       
        <div className="flex flex-row gap-10">
         <div className="flex-1"> 
-          <div className="text-5xl text-white">Manoj Nandakumar.</div>
+          <div className=" text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white">Manoj Nandakumar.</div>
           </div>
         <div className="flex-grow flex flex-row items-end justify-end gap-2">
           {routes.map((route) => (
