@@ -19,7 +19,7 @@ const SocialButtons = () => {
       <a href="https://www.linkedin.com/in/manoj-nandakumar" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
-      <a href="https://github.com/manojn2207" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/manojn22" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </a>
      
