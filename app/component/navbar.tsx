@@ -1,20 +1,25 @@
+import { useState } from "react";
 import Link from "next/link";
-import Image from 'next/image'
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { routes } from "../routes";
-import '../styles/globals.css';
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-export default function Navbar() {
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="w-full py-3">
-      
-       <div className="flex flex-row gap-10">
-        <div className="flex-1"> 
-          <div className=" text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white">Manoj Nandakumar.</div>
-          </div>
-        <div className="flex-grow flex flex-row items-end justify-end gap-2">
+      <div className="flex flex-row justify-between items-center px-4">
+        <div className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white">
+          Manoj Nandakumar
+        </div>
+        <div className="hidden flex-grow md:flex flex-row items-end justify-end gap-2">
           {routes.map((route) => (
             
             
@@ -53,8 +58,42 @@ export default function Navbar() {
               
             </Link>
         </div>
-        </div>
+    
       
+
+        <button className="text-white md:hidden" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
+        </button>
+      </div>
+      <div className={`md:hidden md:flex md:items-center md:justify-between ${isOpen ? "block" : "hidden"} md:block`}>
+        <div className="flex flex-col md:flex-row md:gap-2 mt-2 md:mt-0">
+          {routes.map((route) => (
+            <Link
+              href={route.route}
+              key={route.name}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                pathname === route.route
+                  ? "bg-primary-dark text-white hover:bg-primary-light"
+                  : "text-white hover:bg-primary-very_light"
+              }`}
+            >
+              {route.name}
+            </Link>
+          ))}
+          <Link
+            href="/ManojNandakumar_Resume_SDE.pdf"
+            download="ManojNandakumar_Resume_SDE"
+            target="_blank"
+            key="Resume"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-primary-very_light"
+          >
+            <FontAwesomeIcon className="mr-1" icon={faDownload} size="1x" />
+            Resume
+          </Link>
+        </div>
+      </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
