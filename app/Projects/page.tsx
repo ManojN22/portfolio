@@ -9,7 +9,7 @@ const Projects = () => {
       <h1 className="text-4xl text-white font-bold mb-8">Projects</h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={index} className="p-4 bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
               src={project.image}
               alt={project.title}
@@ -17,7 +17,7 @@ const Projects = () => {
               height={300}
               className="w-full image-height object-scale-down"
             />
-            <div className="p-6">
+            <div className="mt-2">
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
               <p className="text-gray-700 mb-4">{project.description}</p>
               {project.github?<Link href={project.github}>View on GitHub</Link>:""}
