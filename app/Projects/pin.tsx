@@ -12,7 +12,7 @@ const ProjectPin = () => {
               </Link></h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.slice(0, 3).map((project, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={index} className="p-3 bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
               src={project.image}
               alt={project.title}
@@ -20,7 +20,7 @@ const ProjectPin = () => {
               height={300}
               className="w-full pin-image-height object-scale-down"
             />
-            <div className="p-6 flex items-center justify-between">
+            <div className="mt-2 flex items-center justify-between">
               <div>
                 <h2 className="text-xl font-bold mb-2">{project.title}</h2>
                 <p className="text-gray-700 mb-4">{project.description}</p>
